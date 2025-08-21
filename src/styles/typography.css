@@ -1,0 +1,298 @@
+/* ===============================
+   Tokens (vars) — safe with Tailwind
+   =============================== */
+:root {
+	--ty-fs-xxs: 0.75rem;
+	--ty-fs-xs: 0.8125rem;
+	--ty-fs-sm: 0.875rem;
+	--ty-fs-md: 1rem;
+	--ty-fs-lg: 1.125rem;
+	--ty-fs-xl: 1.25rem;
+	--ty-fs-2xl: 1.5rem;
+	--ty-fs-3xl: 1.875rem;
+	--ty-fs-4xl: 2.25rem;
+	--ty-fs-5xl: 3rem;
+	
+	--ty-lh-tight: 1.1;
+	--ty-lh-snug: 1.25;
+	--ty-lh-normal: 1.5;
+	--ty-lh-relaxed: 1.7;
+	
+	--ty-track-tight: -0.01em;
+	--ty-track-normal: 0;
+	--ty-track-wide: 0.02em;
+}
+
+@layer utilities {
+	
+	/* ===============================
+		 Components — namespaced with ty-
+		 =============================== */
+	/* Titles */
+	.ty-title {
+		font-size: var(--ty-fs-5xl);
+		line-height: var(--ty-lh-tight);
+		letter-spacing: var(--ty-track-tight);
+		margin: 0 0 .5em;
+	}
+	
+	.ty-subtitle {
+		font-size: var(--ty-fs-3xl);
+		line-height: var(--ty-lh-snug);
+		letter-spacing: var(--ty-track-tight);
+		margin: 0 0 .6em;
+	}
+	
+	/* Headings */
+	.ty-h1 {
+		font-size: var(--ty-fs-4xl);
+		line-height: var(--ty-lh-tight);
+		margin: 0 0 .6em;
+	}
+	
+	.ty-h2 {
+		font-size: var(--ty-fs-3xl);
+		line-height: var(--ty-lh-snug);
+		margin: 0 0 .6em;
+	}
+	
+	.ty-h3 {
+		font-size: var(--ty-fs-2xl);
+		line-height: var(--ty-lh-snug);
+		margin: 0 0 .6em;
+	}
+	
+	.ty-h4 {
+		font-size: var(--ty-fs-xl);
+		line-height: var(--ty-lh-normal);
+		margin: 0 0 .6em;
+	}
+	
+	.ty-h5 {
+		font-size: var(--ty-fs-lg);
+		line-height: var(--ty-lh-normal);
+		margin: 0 0 .5em;
+	}
+	
+	.ty-h6 {
+		font-size: var(--ty-fs-md);
+		line-height: var(--ty-lh-normal);
+		margin: 0 0 .5em;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+	}
+	
+	/* Body text */
+	.ty-text {
+		font-size: var(--ty-fs-md);
+		line-height: var(--ty-lh-relaxed);
+		margin: 0 0 1em;
+	}
+	
+	.ty-lead {
+		font-size: var(--ty-fs-lg);
+		line-height: var(--ty-lh-relaxed);
+		margin: 0 0 1em;
+	}
+	
+	/* Small / Caption / Overline / Label */
+	.ty-small {
+		font-size: var(--ty-fs-sm);
+		line-height: var(--ty-lh-normal);
+	}
+	
+	.ty-caption {
+		font-size: var(--ty-fs-xs);
+		line-height: var(--ty-lh-normal);
+		color: #666;
+	}
+	
+	.ty-overline {
+		font-size: var(--ty-fs-xxs);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #666;
+	}
+	
+	.ty-label {
+		font-size: var(--ty-fs-sm);
+		line-height: var(--ty-lh-snug);
+		font-weight: 600;
+	}
+	
+	/* Buttons / Controls text style */
+	.ty-button {
+		font-size: var(--ty-fs-sm);
+		line-height: var(--ty-lh-snug);
+		font-weight: 700;
+		letter-spacing: .02em;
+	}
+	
+	/* Code / Quote */
+	.ty-code {
+		font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+		font-size: 0.95em;
+		background: #F5F5F5;
+		padding: .1em .3em;
+		border-radius: 4px;
+	}
+	
+	.ty-quote {
+		font-size: var(--ty-fs-lg);
+		line-height: var(--ty-lh-relaxed);
+		border-inline-start: 4px solid #E5E7EB;
+		padding-inline: 1em;
+		color: #374151;
+	}
+	
+	/* ===============================
+		 Weight & Dots utilities (VF-aware) — namespaced
+		 =============================== */
+	.ty-w-100 {
+		font-weight: 100;
+	}
+	
+	.ty-w-200 {
+		font-weight: 200;
+	}
+	
+	.ty-w-300 {
+		font-weight: 300;
+	}
+	
+	.ty-w-400 {
+		font-weight: 400;
+	}
+	
+	.ty-w-500 {
+		font-weight: 500;
+	}
+	
+	.ty-w-600 {
+		font-weight: 600;
+	}
+	
+	.ty-w-700 {
+		font-weight: 700;
+	}
+	
+	.ty-w-800 {
+		font-weight: 800;
+	}
+	
+	.ty-w-900 {
+		font-weight: 900;
+	}
+	
+	@supports (font-variation-settings: normal) {
+		.ty-w-100 {
+			font-variation-settings: "wght" 100;
+		}
+		
+		.ty-w-200 {
+			font-variation-settings: "wght" 200;
+		}
+		
+		.ty-w-300 {
+			font-variation-settings: "wght" 300;
+		}
+		
+		.ty-w-400 {
+			font-variation-settings: "wght" 400;
+		}
+		
+		.ty-w-500 {
+			font-variation-settings: "wght" 500;
+		}
+		
+		.ty-w-600 {
+			font-variation-settings: "wght" 600;
+		}
+		
+		.ty-w-700 {
+			font-variation-settings: "wght" 700;
+		}
+		
+		.ty-w-800 {
+			font-variation-settings: "wght" 800;
+		}
+		
+		.ty-w-900 {
+			font-variation-settings: "wght" 900;
+		}
+		
+		/* IRANYekanX custom axis: "dots" (0–4). Default weight override is 400; combine with ty-w-* as needed. */
+		.ty-dots-0 {
+			font-variation-settings: "dots" 0;
+		}
+		
+		.ty-dots-1 {
+			font-variation-settings: "dots" 1;
+		}
+		
+		.ty-dots-2 {
+			font-variation-settings: "dots" 2;
+		}
+		
+		.ty-dots-3 {
+			font-variation-settings: "dots" 3;
+		}
+		
+		.ty-dots-4 {
+			font-variation-settings: "dots" 4;
+		}
+	}
+	
+	/* ===============================
+		 Tracking & Line-height helpers — namespaced
+		 =============================== */
+	.ty-lh-tight {
+		line-height: var(--ty-lh-tight);
+	}
+	
+	.ty-lh-snug {
+		line-height: var(--ty-lh-snug);
+	}
+	
+	.ty-lh-normal {
+		line-height: var(--ty-lh-normal);
+	}
+	
+	.ty-lh-relaxed {
+		line-height: var(--ty-lh-relaxed);
+	}
+	
+	.ty-track-tight {
+		letter-spacing: var(--ty-track-tight);
+	}
+	
+	.ty-track-normal {
+		letter-spacing: var(--ty-track-normal);
+	}
+	
+	.ty-track-wide {
+		letter-spacing: var(--ty-track-wide);
+	}
+	
+	/* ===============================
+		 Persian Numerals (default & monospaced) — namespaced
+		 =============================== */
+	.ty-nums-fa {
+		-webkit-font-feature-settings: "ss02";
+		font-feature-settings: "ss02";
+	}
+	
+	.ty-nums-fa-mono {
+		-webkit-font-feature-settings: "ss03";
+		font-feature-settings: "ss03";
+	}
+	
+	/* Optional direction helpers */
+	.ty-rtl {
+		direction: rtl;
+	}
+	
+	.ty-ltr {
+		direction: ltr;
+	}
+}
