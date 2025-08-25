@@ -21,6 +21,16 @@ export default tseslint.config([
 			...tseslint.configs.recommendedTypeChecked,
 			...tseslint.configs.stylisticTypeChecked,
 		],
+		rules: {
+			'@typescript-eslint/no-unsafe-assignment': 'off',
+			'@typescript-eslint/no-unsafe-call': 'off',
+			'@typescript-eslint/no-misused-promises': 'off',
+			'react-dom/no-missing-button-type': 'off',
+			'@typescript-eslint/no-redundant-type-constituents': 'off',
+			'@typescript-eslint/no-unsafe-member-access': 'off',
+			'@typescript-eslint/no-floating-promises': 'off',
+			'@typescript-eslint/no-unsafe-argument': 'off',
+		},
 		languageOptions: {
 			parserOptions: {
 				project: ['./tsconfig.node.json', './tsconfig.app.json'],

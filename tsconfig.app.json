@@ -29,7 +29,11 @@
 			"@/*" : [
 				"./src/*"
 			]
-		}
+		} ,
+		"resolveJsonModule" : true ,
+		"isolatedModules" : true ,
+		"esModuleInterop" : true ,
+		"forceConsistentCasingInFileNames" : true
 	} ,
 	"include" : [
 		"src"
