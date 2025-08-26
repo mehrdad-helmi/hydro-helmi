@@ -1,3 +1,4 @@
+import type { Database } from '@/types';
 import {
 	type AuthChangeEvent,
 	createClient,
@@ -5,9 +6,6 @@ import {
 	type SupabaseClient,
 	type User,
 } from '@supabase/supabase-js';
-
-// Define a lightweight Database type for generics (extend later when tables are defined)
-type Database = object;
 
 // Environment variables from Vite
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string | undefined;

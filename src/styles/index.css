@@ -126,7 +126,7 @@
 	
 	/* generic glass surface */
 	.glass {
-		@apply rounded border border-black/15 bg-white/10 backdrop-blur-xl shadow;
+		@apply rounded border border-black/15 bg-white/40 backdrop-blur shadow;
 	}
 	
 	.acrylic {

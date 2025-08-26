@@ -1,12 +1,11 @@
-import { supabaseClient } from '@/services/supabase.ts';
+import { supabaseClient } from '@/services';
+import type { PumpingTestsRow } from '@/types';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 export function TestDetailPage() {
 	const { testId } = useParams();
-	const [data, setData] = useState<{ well_number: string; id: number } | null>(
-		null,
-	);
+	const [data, setData] = useState<PumpingTestsRow>();
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {

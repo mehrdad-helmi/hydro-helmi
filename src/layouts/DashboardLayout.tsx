@@ -2,10 +2,10 @@ import logoVert from '@/assets/images/logo-vert.svg';
 import { useAuth } from '@/auth';
 import { TestList } from '@/components';
 import { Button } from '@/components/ui';
-import { supabaseClient } from '@/services/supabase.ts';
+import { supabaseClient } from '@/services';
 import { Outlet, useNavigate } from 'react-router-dom';
 
-export default function DashboardLayout() {
+export function DashboardLayout() {
 	return (
 		<div className="min-h-screen grid grid-rows-[auto_1fr_auto] gap-3 p-3">
 			<Header />

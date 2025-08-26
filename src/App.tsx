@@ -1,8 +1,9 @@
 import './App.css';
-import { AuthProvider } from '@/auth/AuthProvider';
-import DashboardLayout from '@/layouts/DashboardLayout';
+import { AuthProvider } from '@/auth';
+import { Toaster } from '@/components/ui';
+import { DashboardLayout } from '@/layouts';
 import { DashboardHome, LoginPage, TestDetailPage } from '@/pages';
-import ProtectedRoute from '@/routes/ProtectedRoute.tsx';
+import { ProtectedRoute } from '@/routes';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
 					<Route path="*" element={<div className="p-6">صفحه یافت نشد</div>} />
 				</Routes>
 			</BrowserRouter>
+			<Toaster position="bottom-center" richColors dir="rtl" />
 		</AuthProvider>
 	);
 }

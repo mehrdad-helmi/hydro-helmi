@@ -8,6 +8,8 @@ import { globalIgnores } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
+
+
 export default tseslint.config([
 	globalIgnores(['dist']),
 	{
@@ -30,6 +32,7 @@ export default tseslint.config([
 			'@typescript-eslint/no-unsafe-member-access': 'off',
 			'@typescript-eslint/no-floating-promises': 'off',
 			'@typescript-eslint/no-unsafe-argument': 'off',
+			'@typescript-eslint/prefer-nullish-coalescing': 'off',
 		},
 		languageOptions: {
 			parserOptions: {

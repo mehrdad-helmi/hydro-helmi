@@ -5,3 +5,6 @@ export * from './card.tsx';
 export * from './dialog.tsx';
 export * from './sonner.tsx';
 export * from './tooltip.tsx';
+export * from './unit-input.tsx';
+export * from './textarea.tsx';
+export * from './menubar.tsx';

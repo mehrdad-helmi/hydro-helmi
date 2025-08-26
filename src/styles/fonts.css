@@ -34,5 +34,7 @@ body {
 @supports (font-variation-settings: normal) {
 	body {
 		font-family: "IRANYekanXVF", tahoma, sans-serif;
+		-webkit-font-feature-settings: "ss02";
+		font-feature-settings: "ss02";
 	}
 }
